@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('js')</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academics &mdash; Treehouse Elementary School</title>
+  <meta name="description" content="Curriculum by grade, specialist subjects, learning support, a typical Grade 3 timetable and how we report progress at Treehouse Elementary.">
+  <meta name="theme-color" content="#2349d6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='21.5' y='30' width='5' height='15' rx='2.5' fill='%2317204a'/%3E%3Ccircle cx='14' cy='22' r='10' fill='%232349d6'/%3E%3Ccircle cx='34' cy='22' r='10' fill='%232349d6'/%3E%3Ccircle cx='24' cy='15' r='12' fill='%232349d6'/%3E%3Cpath d='M15.5 25 24 17.5l8.5 7.5z' fill='%23f25c3d'/%3E%3Crect x='17.5' y='24.5' width='13' height='9' rx='1.5' fill='%23ffc93c'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Inline SVG icon sprite (referenced with <use href="#i-name">) -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 4.2 2 2 0 0 1 3.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.8 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14c2.4.2 4 1.7 4.5 4.5"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.4-1.2-1.6-1.2-3 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4C21 6.4 17 3 12 3z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10" cy="7" r="1.2"/><circle cx="15" cy="7" r="1.2"/></symbol>
+    <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m12 7.5 4 2.9-1.5 4.7h-5L8 10.4z"/><path d="M12 3v4.5M16 10.4l4.3-1.4M14.5 15.1l2.6 3.7M9.5 15.1l-2.6 3.7M8 10.4 3.7 9"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5.5 9.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2 2 2 0 0 0 2 2h14"/><path d="M8 7h8"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M16 7l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9a4.6 4.6 0 0 1 9-3 4.6 4.6 0 0 1 9 3c-2 4.6-9 9-9 9z"/></symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 21v-3M16 21v-3M8 14.5h.01M16 14.5h.01"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 7c-1.5-1-5-1.3-6.5 1.5S5 16 7.5 19c1.3 1.6 2.8 2 4.5 1 1.7 1 3.2.6 4.5-1 2.5-3 3.5-7.7 2-10.5S13.5 6 12 7z"/><path d="M12 7c0-2 1-3.5 3-4"/></symbol>
+    <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 3 3 6l2 4 2-1v12h10V9l2 1 2-4-5-3c-.5 1.5-2 2.5-4 2.5S8.5 4.5 8 3z"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M14 4l6 6L9 21H3v-6z"/><path d="m12.5 5.5 6 6"/></symbol>
+    <symbol id="i-pawn" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.7"/><path d="M9 11h6M10.3 11 9 17h6l-1.3-6M6.5 21h11L16 17H8z"/></symbol>
+    <symbol id="i-robot" viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 8V5M9.5 13h.01M14.5 13h.01M9.5 16h5M3 12v3M21 12v3"/><circle cx="12" cy="4" r="1"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></symbol>
+    <symbol id="i-mask" viewBox="0 0 24 24"><path d="M4 4h16v7a8 8 0 0 1-16 0z"/><path d="M8.5 9h.01M15.5 9h.01M8.5 13.5c1.8 1.8 5.2 1.8 7 0"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M10 2h4"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12C12 8 9 5.5 4.5 5.5 4.5 10 7.5 12 12 12z"/><path d="M12 14.5c0-3.2 2.4-5.5 7.5-5.5 0 3.8-3 5.5-7.5 5.5z"/></symbol>
+    <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V3h6v1M9 11h6M9 15h4"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 15a3 3 0 0 1-3 3H9l-5 3.5V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3z"/></symbol>
+    <symbol id="i-trees" viewBox="0 0 24 24"><path d="M8 21v-4M16 21v-3"/><path d="M8 3 3.5 12h3L4 17h8l-2.5-5h3z"/><path d="M16 7l-3.5 6h2l-2 5h7l-2-5h2z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5M22 9v5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z"/><path d="M19 16c.3 1.8 1 2.6 2.8 2.8-1.8.3-2.5 1-2.8 2.8-.3-1.8-1-2.5-2.8-2.8 1.8-.2 2.5-1 2.8-2.8z"/></symbol>
+    <symbol id="i-swipe" viewBox="0 0 24 24"><path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M5 8h3.5a2.5 2.5 0 1 1 5 0H17v3.5a2.5 2.5 0 1 1 0 5V20H5z"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v3.5H8V21h3.5v-7.5H14l.7-3.5h-3.2V7.8c0-.6.5-1.1 1.1-1.1H15z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></symbol>
+  </svg>
+
+  <!-- ============================ ANNOUNCEMENT ============================ -->
+  <div class="announce">
+    <div class="container">
+      <p>
+        <svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>
+        <span>Open mornings on Saturday, October 17 and November 14. <a href="admissions.html#open-days">Book a place</a></span>
+      </p>
+      <div class="announce-meta">
+        <a href="tel:+15550142290"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>(555) 014-2290</a>
+        <a href="index.html#portal"><svg class="ico" aria-hidden="true"><use href="#i-key"/></svg>Parent portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Treehouse Elementary School — home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <rect class="bm-trunk" x="21.5" y="30" width="5" height="15" rx="2.5"/>
+            <circle class="bm-canopy" cx="14" cy="22" r="10"/>
+            <circle class="bm-canopy" cx="34" cy="22" r="10"/>
+            <circle class="bm-canopy" cx="24" cy="15" r="12"/>
+            <path class="bm-roof" d="M15.5 25 24 17.5l8.5 7.5z"/>
+            <rect class="bm-house" x="17.5" y="24.5" width="13" height="9" rx="1.5"/>
+            <rect class="bm-door" x="22.2" y="27.5" width="3.6" height="6" rx="1"/>
+          </svg>
+          <span class="brand-text">
+            <span class="brand-name">Treehouse</span>
+            <span class="brand-sub">Elementary &middot; K&ndash;5</span>
+          </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false" aria-label="Open the menu">
+          <span class="toggler-bar"></span>
+          <span class="toggler-bar"></span>
+          <span class="toggler-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="primary-nav">
+          <ul class="navbar-nav nav-menu ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="academics.html">Academics</a></li>
+            <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#clubs">Clubs</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#calendar">Calendar</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#news">News</a></li>
+            <li class="nav-item"><a class="btn-pop btn-pop-sm nav-cta" href="admissions.html#open-days">Book a visit</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ PAGE HERO ============================ -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <nav class="crumbs" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">Academics</li>
+              </ol>
+            </nav>
+            <span class="kicker">Academics</span>
+            <h1 id="page-title">A strong core, taught with <span class="scribble">joy<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14C60 5 118 3 170 9s92 8 126-3" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg></span></h1>
+            <p class="hero-lead">Reading, writing and math come first at Treehouse, every morning. Afternoons open out into science, history, the arts and time outdoors, taught by class teachers and six specialists who know their subjects deeply.</p>
+            <ul class="jump-nav" aria-label="On this page">
+              <li><a href="#curriculum"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg>Curriculum</a></li>
+              <li><a href="#specialists"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg>Specialists</a></li>
+              <li><a href="#support"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg>Learning support</a></li>
+              <li><a href="#timetable"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>A typical day</a></li>
+              <li><a href="#assessment"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg>Assessment</a></li>
+            </ul>
+          </div>
+          <div class="page-hero-media">
+            <div class="shape shape-sun" aria-hidden="true"><svg viewBox="0 0 200 200"><g fill="currentColor"><circle cx="100" cy="100" r="50"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(0 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(30 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(60 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(90 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(120 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(150 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(180 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(210 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(240 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(270 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(300 100 100)"/><rect x="94" y="4" width="12" height="32" rx="6" transform="rotate(330 100 100)"/></g></svg></div>
+            <div class="shape shape-dots" aria-hidden="true"></div>
+            <div class="arch">
+              <img src="img/academics-hero.jpg" alt="An open lined notebook and a green pencil on bright yellow, green and blue paper" width="1000" height="820" fetchpriority="high">
+            </div>
+            <div class="sticker" aria-hidden="true"><div><strong>6</strong><span>specialist teachers</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CURRICULUM BY GRADE ============================ -->
+    <section class="section" id="curriculum" aria-labelledby="curriculum-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker reveal">Curriculum by grade</span>
+          <h2 id="curriculum-title" class="section-title reveal d1">The core, grade by grade</h2>
+          <p class="section-lead reveal d1">Our curriculum follows state standards and goes further where children are ready. Here is what each grade focuses on across the four core subjects.</p>
+        </div>
+
+        <div class="curr-grid">
+          <article class="curr-card reveal" data-hue="blue">
+            <div class="curr-head"><span class="curr-badge" aria-hidden="true">K</span><div><h3>Kindergarten</h3><span>Ages 5&ndash;6 &middot; Half-day option until October</span></div></div>
+            <dl class="curr-list">
+              <div><dt>Literacy</dt><dd>Letter sounds, first sight words, retelling stories and drawing to write.</dd></div>
+              <div><dt>Math</dt><dd>Counting to 100, comparing groups, shapes and adding with objects.</dd></div>
+              <div><dt>Science</dt><dd>Seasons, the five senses and how plants grow.</dd></div>
+              <div><dt>Social studies</dt><dd>Me, my family and our classroom community.</dd></div>
+            </dl>
+          </article>
+          <article class="curr-card reveal d1" data-hue="sun">
+            <div class="curr-head"><span class="curr-badge" aria-hidden="true">1</span><div><h3>Grade 1</h3><span>Ages 6&ndash;7</span></div></div>
+            <dl class="curr-list">
+              <div><dt>Literacy</dt><dd>Phonics blends, decodable readers and writing complete sentences.</dd></div>
+              <div><dt>Math</dt><dd>Addition and subtraction within 20, place value to 120, measuring length.</dd></div>
+              <div><dt>Science</dt><dd>Light and sound, and what living things need.</dd></div>
+              <div><dt>Social studies</dt><dd>Maps of our school and neighborhood.</dd></div>
+            </dl>
+          </article>
+          <article class="curr-card reveal d2" data-hue="tomato">
+            <div class="curr-head"><span class="curr-badge" aria-hidden="true">2</span><div><h3>Grade 2</h3><span>Ages 7&ndash;8</span></div></div>
+            <dl class="curr-list">
+              <div><dt>Literacy</dt><dd>Chapter books, book clubs and paragraphs with topic sentences.</dd></div>
+              <div><dt>Math</dt><dd>Numbers to 1,000, money, time to five minutes and bar graphs.</dd></div>
+              <div><dt>Science</dt><dd>Solids, liquids and gases, and local habitats.</dd></div>
+              <div><dt>Social studies</dt><dd>Communities past and present, and how our town works.</dd></div>
+            </dl>
+          </article>
+          <article class="curr-card reveal" data-hue="blue">
+            <div class="curr-head"><span class="curr-badge" aria-hidden="true">3</span><div><h3>Grade 3</h3><span>Ages 8&ndash;9</span></div></div>
+            <dl class="curr-list">
+              <div><dt>Literacy</dt><dd>Novel studies, research reports and joined handwriting.</dd></div>
+              <div><dt>Math</dt><dd>Multiplication and division facts, first fractions, area and perimeter.</dd></div>
+              <div><dt>Science</dt><dd>Life cycles, forces and motion, and fair tests.</dd></div>
+              <div><dt>Social studies</dt><dd>Local history and how local government works.</dd></div>
+            </dl>
+          </article>
+          <article class="curr-card reveal d1" data-hue="sun">
+            <div class="curr-head"><span class="curr-badge" aria-hidden="true">4</span><div><h3>Grade 4</h3><span>Ages 9&ndash;10</span></div></div>
+            <dl class="curr-list">
+              <div><dt>Literacy</dt><dd>Persuasive writing, poetry and literature circles.</dd></div>
+              <div><dt>Math</dt><dd>Multi-digit multiplication, long division, equivalent fractions and angles.</dd></div>
+              <div><dt>Science</dt><dd>Energy, electric circuits and the Earth&rsquo;s changing surface.</dd></div>
+              <div><dt>Social studies</dt><dd>State history, geography and natural resources.</dd></div>
+            </dl>
+          </article>
+          <article class="curr-card reveal d2" data-hue="tomato">
+            <div class="curr-head"><span class="curr-badge" aria-hidden="true">5</span><div><h3>Grade 5</h3><span>Ages 10&ndash;11</span></div></div>
+            <dl class="curr-list">
+              <div><dt>Literacy</dt><dd>Argument essays, novel seminars and public speaking.</dd></div>
+              <div><dt>Math</dt><dd>Decimals, operations with fractions, volume and coordinate grids.</dd></div>
+              <div><dt>Science</dt><dd>Ecosystems, the solar system and chemical changes.</dd></div>
+              <div><dt>Social studies</dt><dd>Early American history, civics and a mock election.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SPECIALIST SUBJECTS ============================ -->
+    <section class="section band band-cream" id="specialists" aria-labelledby="specialists-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker kicker-tomato reveal">Specialist subjects</span>
+          <h2 id="specialists-title" class="section-title reveal d1">Taught by specialists, from Kindergarten up</h2>
+          <p class="section-lead reveal d1">Music, art, PE, Spanish and STEM each have their own teacher and their own room. Children meet every specialist every week.</p>
+        </div>
+
+        <div class="spec-grid">
+          <article class="spec-card wide reveal">
+            <div class="spec-img"><img src="img/music.jpg" alt="A bright red, yellow and green xylophone" width="800" height="600" loading="lazy"><span class="pill">Twice a week</span></div>
+            <div class="spec-body">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-music"/></svg>Music</h3>
+              <p>Singing, rhythm and percussion from Kindergarten, recorder in Grade 3, and a strings option in Grades 4 and 5. Every class performs at the winter and spring concerts.</p>
+              <div class="teacher"><span class="avatar" aria-hidden="true">TA</span><div><strong>Mr. Tom&aacute;s Alvarez</strong><span>Music teacher and choir director</span></div></div>
+            </div>
+          </article>
+          <article class="spec-card wide reveal d1">
+            <div class="spec-img"><img src="img/art.jpg" alt="A watercolor paint set with bright pans of color" width="800" height="600" loading="lazy"><span class="pill">Once a week</span></div>
+            <div class="spec-body">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg>Art</h3>
+              <p>Drawing, painting, clay and printmaking in a studio with a kiln. Children study one artist each term and show their work at the spring art show.</p>
+              <div class="teacher"><span class="avatar avatar-tomato" aria-hidden="true">HO</span><div><strong>Ms. Hana Okafor</strong><span>Art teacher</span></div></div>
+            </div>
+          </article>
+          <article class="spec-card reveal">
+            <div class="spec-img"><img src="img/field.jpg" alt="A red running track beside a green sports field" width="800" height="600" loading="lazy"><span class="pill">Three times a week</span></div>
+            <div class="spec-body">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-ball"/></svg>PE</h3>
+              <p>Movement, games and teamwork on the field and in the gym, with a swimming unit for Grade 3.</p>
+              <div class="teacher"><span class="avatar avatar-sun" aria-hidden="true">DW</span><div><strong>Coach Dana Whitfield</strong><span>PE teacher</span></div></div>
+            </div>
+          </article>
+          <article class="spec-card reveal d1">
+            <div class="spec-img"><img src="img/languages.jpg" alt="Close-up of a colorful world globe" width="800" height="600" loading="lazy"><span class="pill">2&ndash;3 times a week</span></div>
+            <div class="spec-body">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>Spanish</h3>
+              <p>Songs and stories in Kindergarten, then reading, writing and conversation. Grade 5 hosts a pen-pal exchange.</p>
+              <div class="teacher"><span class="avatar avatar-ink" aria-hidden="true">LM</span><div><strong>Se&ntilde;ora Luc&iacute;a Moreno</strong><span>Languages teacher</span></div></div>
+            </div>
+          </article>
+          <article class="spec-card reveal d2">
+            <div class="spec-img"><img src="img/science.jpg" alt="Test tubes with colored liquid in a rack beside glass beakers" width="800" height="600" loading="lazy"><span class="pill">Weekly lab</span></div>
+            <div class="spec-body">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg>STEM lab</h3>
+              <p>Experiments, simple machines, circuits and robotics in the makerspace, with a design challenge each term.</p>
+              <div class="teacher"><span class="avatar" aria-hidden="true">RB</span><div><strong>Mr. Ravi Banerjee</strong><span>STEM teacher</span></div></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="chart-card reveal">
+          <div class="chart-head">
+            <div>
+              <h3>Specialist time each week</h3>
+              <p>Minutes per week with a specialist teacher, by grade. Library time is extra.</p>
+            </div>
+            <ul class="chart-legend" data-chart-legend aria-hidden="true"></ul>
+          </div>
+          <div data-minutes-chart>
+            <ul class="chart-fallback">
+              <li>Kindergarten: 285 minutes a week</li>
+              <li>Grades 1 and 2: 330 to 365 minutes a week</li>
+              <li>Grades 3 to 5: 380 to 410 minutes a week</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ LEARNING SUPPORT ============================ -->
+    <section class="section" id="support" aria-labelledby="support-title">
+      <div class="container">
+        <div class="support-grid">
+          <div>
+            <span class="kicker reveal">Learning support</span>
+            <h2 id="support-title" class="section-title reveal d1">Help that arrives early, and stretch that goes further</h2>
+            <p class="section-lead reveal d1">Every child learns at their own pace. Our learning support team works alongside class teachers so that children who need a boost get it quickly, and children ready for more are never left waiting.</p>
+            <ul class="service-list">
+              <li class="reveal">
+                <span class="feature-ico" aria-hidden="true"><svg class="ico"><use href="#i-book"/></svg></span>
+                <div><h3>Reading intervention</h3><p>Groups of three with a trained reading specialist, up to four times a week.</p></div>
+              </li>
+              <li class="reveal">
+                <span class="feature-ico sun" aria-hidden="true"><svg class="ico"><use href="#i-puzzle"/></svg></span>
+                <div><h3>Math boost</h3><p>Short, targeted sessions that close gaps before they grow.</p></div>
+              </li>
+              <li class="reveal">
+                <span class="feature-ico tomato" aria-hidden="true"><svg class="ico"><use href="#i-bulb"/></svg></span>
+                <div><h3>Enrichment</h3><p>Extension projects and a weekly math circle for children ready for more challenge.</p></div>
+              </li>
+              <li class="reveal">
+                <span class="feature-ico" aria-hidden="true"><svg class="ico"><use href="#i-chat"/></svg></span>
+                <div><h3>Speech and occupational therapy</h3><p>Visiting therapists work on site, so children don&rsquo;t lose half a day to appointments.</p></div>
+              </li>
+              <li class="reveal">
+                <span class="feature-ico sun" aria-hidden="true"><svg class="ico"><use href="#i-heart"/></svg></span>
+                <div><h3>School counselor</h3><p>Friendship groups, one-to-one check-ins and support for families through big changes.</p></div>
+              </li>
+            </ul>
+          </div>
+          <div class="support-media reveal d1">
+            <div class="shape shape-dots" aria-hidden="true"></div>
+            <div class="photo"><img src="img/support.jpg" alt="An open book with pages fanned out" width="800" height="640" loading="lazy"></div>
+            <div class="cycle">
+              <h3>How support works</h3>
+              <ol>
+                <li><strong>Notice</strong>Teachers spot a need in class work or check-ins.</li>
+                <li><strong>Plan</strong>We meet with you to agree on goals.</li>
+                <li><strong>Support</strong>Six weeks of focused help, in or out of class.</li>
+                <li><strong>Review</strong>We check progress together and decide next steps.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ TIMETABLE ============================ -->
+    <section class="section band band-sky" id="timetable" aria-labelledby="timetable-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker kicker-tomato reveal">A typical day</span>
+          <h2 id="timetable-title" class="section-title reveal d1">A week in Grade 3</h2>
+          <p class="section-lead reveal d1">Mornings belong to literacy and math. Afternoons bring science, the arts and time outdoors. Kindergarten follows the same rhythm with more play and a rest after lunch.</p>
+        </div>
+
+        <span class="swipe-hint"><svg class="ico" aria-hidden="true"><use href="#i-swipe"/></svg>Swipe to see the whole week</span>
+        <div class="tt-wrap reveal" tabindex="0" role="region" aria-labelledby="tt-caption">
+          <table class="tt">
+            <caption id="tt-caption">Grade 3 weekly timetable</caption>
+            <thead>
+              <tr><th scope="col">Time</th><th scope="col">Monday</th><th scope="col">Tuesday</th><th scope="col">Wednesday</th><th scope="col">Thursday</th><th scope="col">Friday</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">8:10<small>20 min</small></th><td colspan="5"><span class="c-together">Arrival and morning meeting</span></td></tr>
+              <tr><th scope="row">8:30<small>90 min</small></th><td colspan="5"><span class="c-core">Literacy block: reading groups, phonics and writer&rsquo;s workshop</span></td></tr>
+              <tr><th scope="row">10:00<small>20 min</small></th><td colspan="5"><span class="c-play">Recess and snack</span></td></tr>
+              <tr><th scope="row">10:20<small>60 min</small></th><td colspan="5"><span class="c-core">Math workshop</span></td></tr>
+              <tr><th scope="row">11:20<small>30 min</small></th><td><span class="c-spec">Spanish</span></td><td><span class="c-spec">PE</span></td><td><span class="c-spec">Spanish</span></td><td><span class="c-spec">PE</span></td><td><span class="c-spec">Spanish</span></td></tr>
+              <tr><th scope="row">11:50<small>50 min</small></th><td colspan="5"><span class="c-play">Lunch and outdoor play</span></td></tr>
+              <tr><th scope="row">12:40<small>20 min</small></th><td colspan="4"><span class="c-core">Quiet reading</span></td><td><span class="c-spec">Library visit</span></td></tr>
+              <tr><th scope="row">1:00<small>60 min</small></th><td><span class="c-core">Science</span></td><td><span class="c-spec">Art</span></td><td rowspan="2"><span class="c-play">Forest classroom</span></td><td><span class="c-spec">STEM lab</span></td><td><span class="c-core">Social studies</span></td></tr>
+              <tr><th scope="row">2:00<small>40 min</small></th><td><span class="c-spec">Music</span></td><td><span class="c-core">Science</span></td><td><span class="c-spec">Music</span></td><td><span class="c-spec">PE</span></td></tr>
+              <tr><th scope="row">2:40<small>20 min</small></th><td colspan="4"><span class="c-together">Pack up and closing circle</span></td><td><span class="c-together">Friday celebration assembly</span></td></tr>
+              <tr><th scope="row">3:00</th><td colspan="5"><span class="c-together">Dismissal &middot; clubs and after care from 3:15</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tt-note">
+          <ul class="legend tt-legend" aria-label="Timetable key">
+            <li><i class="c-core"></i>Core subjects</li>
+            <li><i class="c-spec"></i>Specialist lessons</li>
+            <li><i class="c-play"></i>Play and outdoors</li>
+            <li><i class="c-together"></i>Together time</li>
+          </ul>
+          <p>Timetables for every grade are shared at curriculum night in September.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ ASSESSMENT ============================ -->
+    <section class="section" id="assessment" aria-labelledby="assessment-title">
+      <div class="container">
+        <div class="assess-grid">
+          <div>
+            <span class="kicker reveal">Assessment and reporting</span>
+            <h2 id="assessment-title" class="section-title reveal d1">Clear reports, and no surprises</h2>
+            <p class="section-lead reveal d1">We report on skills, not letter grades. You will always know what your child can do, what comes next and how you can help at home.</p>
+            <ul class="principles">
+              <li class="reveal"><h3><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg>Standards-based</h3><p>Each skill is marked on a four-step scale, from beginning to exceeding, so progress is easy to see.</p></li>
+              <li class="reveal"><h3><svg class="ico" aria-hidden="true"><use href="#i-folder"/></svg>A portfolio, not just a score</h3><p>Children keep a portfolio of their best work and reflect on it with you at conferences.</p></li>
+              <li class="reveal"><h3><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg>Light-touch testing</h3><p>Short reading and math check-ins three times a year help us plan. No test prep, no stress.</p></li>
+            </ul>
+          </div>
+
+          <article class="report reveal d1" aria-labelledby="report-title">
+            <div class="report-head">
+              <div>
+                <h3 id="report-title">Sample winter report</h3>
+                <p>Grade 3 &middot; four of the skills we report on</p>
+              </div>
+              <span class="pill pill-sun">Term 2</span>
+            </div>
+            <ul class="scale-key" aria-label="Scale">
+              <li><b>1</b> Beginning</li><li><b>2</b> Developing</li><li><b>3</b> Meeting</li><li><b>4</b> Exceeding</li>
+            </ul>
+            <div class="skill"><span class="skill-name"><small>Reading</small>Reads grade-level books with accuracy and expression</span><span class="skill-level">3 &middot; Meeting</span><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <div class="skill"><span class="skill-name"><small>Writing</small>Plans and organizes ideas into clear paragraphs</span><span class="skill-level">2 &middot; Developing</span><span class="meter" data-level="2" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <div class="skill"><span class="skill-name"><small>Math</small>Knows multiplication facts to 10 &times; 10</span><span class="skill-level">4 &middot; Exceeding</span><span class="meter" data-level="4" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <div class="skill"><span class="skill-name"><small>Science</small>Plans a fair test and records results</span><span class="skill-level">3 &middot; Meeting</span><span class="meter" data-level="3" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <p class="comment">&ldquo;A thoughtful reader who asks brilliant questions. Next step: planning paragraphs before writing, which we are practicing with a simple story map.&rdquo;<span>Class teacher comment</span></p>
+          </article>
+        </div>
+
+        <ol class="year-line">
+          <li class="reveal"><span class="month">Sep</span><h3>Baseline check-ins</h3><p>Short reading and math snapshots in the first three weeks.</p></li>
+          <li class="reveal d1"><span class="month">Nov</span><h3>Parent&ndash;teacher conferences</h3><p>Twenty minutes with your child&rsquo;s teacher to set goals.</p></li>
+          <li class="reveal d2"><span class="month">Jan</span><h3>Winter report</h3><p>Skill-by-skill progress with a written comment.</p></li>
+          <li class="reveal d1"><span class="month">Mar</span><h3>Student-led conferences</h3><p>Your child presents their portfolio to you.</p></li>
+          <li class="reveal d2"><span class="month">Jun</span><h3>End-of-year report</h3><p>A full report and the portfolio comes home.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================ CTA STRIP ============================ -->
+    <section class="section section-tight" aria-labelledby="strip-title">
+      <div class="container">
+        <div class="strip reveal">
+          <div class="shape shape-ring" aria-hidden="true"></div>
+          <div>
+            <h2 id="strip-title">See a Treehouse lesson for yourself</h2>
+            <p>School-day tours run most weeks. Watch real classes and meet our teachers.</p>
+          </div>
+          <a class="btn-pop" href="admissions.html#open-days">Book a visit <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <svg class="footer-wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 46V26C120 8 240 0 360 8s240 30 360 30 240-24 360-30 240 6 360 18v20z"/></svg>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Treehouse Elementary School — home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+              <rect class="bm-trunk" x="21.5" y="30" width="5" height="15" rx="2.5"/>
+              <circle class="bm-canopy" cx="14" cy="22" r="10"/>
+              <circle class="bm-canopy" cx="34" cy="22" r="10"/>
+              <circle class="bm-canopy" cx="24" cy="15" r="12"/>
+              <path class="bm-roof" d="M15.5 25 24 17.5l8.5 7.5z"/>
+              <rect class="bm-house" x="17.5" y="24.5" width="13" height="9" rx="1.5"/>
+              <rect class="bm-door" x="22.2" y="27.5" width="3.6" height="6" rx="1"/>
+            </svg>
+            <span class="brand-text">
+              <span class="brand-name">Treehouse</span>
+              <span class="brand-sub">Elementary &middot; K&ndash;5</span>
+            </span>
+          </a>
+          <p>An independent school for Kindergarten through Grade 5, where small classes, specialist teachers and a forest classroom help children grow into confident, kind learners.</p>
+          <div class="socials">
+            <a href="#" aria-label="Treehouse on Instagram"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></a>
+            <a href="#" aria-label="Treehouse on Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a>
+            <a href="#" aria-label="Treehouse on YouTube"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></a>
+          </div>
+        </div>
+
+        <nav aria-label="Explore">
+          <h2 class="footer-title">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="admissions.html#tuition">Tuition and fees</a></li>
+            <li><a href="admissions.html#open-days">Open mornings</a></li>
+            <li><a href="index.html#clubs">After-school clubs</a></li>
+            <li><a href="index.html#calendar">School calendar</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="For families">
+          <h2 class="footer-title">For families</h2>
+          <ul class="footer-links">
+            <li><a href="index.html#portal">Parent portal</a></li>
+            <li><a href="index.html#news">Latest news</a></li>
+            <li><a href="academics.html#timetable">A typical day</a></li>
+            <li><a href="academics.html#support">Learning support</a></li>
+            <li><a href="academics.html#assessment">Reports and conferences</a></li>
+            <li><a href="admissions.html#faq">Admissions FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer-title">Visit us</h2>
+          <ul class="footer-contact">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>48 Juniper Lane<br>Maple Hollow, OR 97000</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+15550142290">(555) 014-2290</a></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:hello@example.com">hello@example.com</a></li>
+          </ul>
+          <p class="footer-hours"><strong>School office</strong><br>Weekdays, <span class="nowrap">7:30 am &ndash; 4:30 pm</span><br>Care runs <span class="nowrap">7:30 am &ndash; 6:00 pm</span></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Treehouse Elementary School. All rights reserved.</p>
+        <p>Template by <a href="https://uicookies.com/">uiCookies</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
